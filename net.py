@@ -1,7 +1,8 @@
 import numpy as np
 import mxnet as mx
 from mxnet import gluon
-from mxnet.gluon import nn, autograd, Block, HybridBlock, Parameter
+from mxnet import autograd
+from mxnet.gluon import nn, Block, HybridBlock, Parameter
 from mxnet.base import numeric_types
 import mxnet.ndarray as F
 
@@ -288,26 +289,4 @@ class Vgg16(Block):
         relu4_3 = h
 
         return [relu1_2, relu2_2, relu3_3, relu4_3]
-
-
-def test_InstanceNorm():
-    import torch
-    from torch import nn as nn2
-    from torch.autograd import Variable
-    tx = Variable(torch.Tensor(1, 2, 200, 300).uniform_(0,1))
-    tlayer = nn2.InstanceNorm2d(2)
-    ty = tlayer(tx)
-    
-    mlayer = InstanceNorm(2)
-    ctx = mx.cpu(0)
-    mlayer.initialize(ctx=ctx)
-    mmx = (mx.nd.array(tx.data.numpy())).as_in_context(ctx)
-    my = mlayer(mmx)
-    print('tx',tx)
-    print('mmx',mmx)
-    print('ty',ty)
-    print('my',my)
-
-if __name__ == "__main__":
-    test_InstanceNorm()
 
