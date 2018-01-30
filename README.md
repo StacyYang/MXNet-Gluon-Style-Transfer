@@ -1,6 +1,6 @@
 # MXNet-Gluon-Style-Transfer
 
-This repo provides MXNet Implementation of **[Neural Style Transfer](#neural-style)** and **[MSG-Net](#real-time-style-transfer)**. We also provide [PyTorch](https://github.com/zhanghang1989/PyTorch-Style-Transfer) and [Torch](https://github.com/zhanghang1989/MSG-Net/) implementations.
+This repo has been included in official [MXNet repo](https://github.com/apache/incubator-mxnet), which provides the implementations of **[MSG-Net](#real-time-style-transfer)** and **[Neural Style Transfer](#neural-style)**. We also provide [PyTorch](https://github.com/zhanghang1989/PyTorch-Style-Transfer) and [Torch](https://github.com/zhanghang1989/MSG-Net/) implementations.
 
 **Tabe of content**
 
