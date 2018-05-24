@@ -57,7 +57,7 @@ python main.py optim --content-image images/content/venice-boat.jpg --style-imag
 ### Stylize Images Using Pre-trained MSG-Net
 0. Download the pre-trained model
 	```bash
-	bash models/download_model.sh
+	python models/download_model.py
 	```
 0. Test the model
 	```bash
